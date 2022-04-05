@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ComposeCryptoApp</string>
+    <string name="active">active</string>
+    <string name="inactive">inactive</string>
+    <string name="data_is_empty">Data is empty. Try later</string>
+    <string name="unexpected_error">An unexpected error occurred</string>
+</resources>

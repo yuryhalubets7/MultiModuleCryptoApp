@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">feature_coin_detail</string>
+    <string name="data_is_empty">Data is empty. Try later</string>
+    <string name="unexpected_error">An unexpected error occurred</string>
+    <string name="team_members">Team members</string>
+    <string name="tags">Tags</string>
+</resources>

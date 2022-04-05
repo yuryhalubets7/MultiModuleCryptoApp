@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_padding">20dp</dimen>
+    <dimen name="middle_padding">10dp</dimen>
+    <dimen name="large_spacer_height">15dp</dimen>
+    <dimen name="general_axis">10dp</dimen>
+    <dimen name="small_border">1dp</dimen>
+    <dimen name="round_corner">100dp</dimen>
+    <dimen name="small_spacer_height">4dp</dimen>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="active">active</string>
+    <string name="inactive">inactive</string>
+    <string name="unexpected_error">An unexpected error occurred</string>
+</resources>
