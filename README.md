@@ -1,7 +1,14 @@
 # Multi-module example
 
-This multi-module project shows how to properly use Clean Architecture. 
-It was developed to train interns and explain to them the main tools in development: ui, di, multi-module, testing and project build process.
+This project will tell you how to use clean architecture in a multi-module project.
+
+In the project you can find the implementation of the following questions: 
+- How to divide an application into modules? 
+- How to organize the work of DI? 
+- How to properly test a multi-module project? 
+- How to work with gradle files?
+
+I'll be glad to help. Telegram: @YuryH7
 
 ## Stack
 
