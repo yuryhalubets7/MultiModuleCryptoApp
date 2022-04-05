@@ -1,6 +1,6 @@
 # Multi-module example
 
-This multi-module project shows how to properly use the main modern architectural patterns: SOLID, Clean Architecture. 
+This multi-module project shows how to properly use Clean Architecture. 
 It was developed to train interns and explain to them the main tools in development: ui, di, multi-module, testing and project build process.
 
 ## Stack
