@@ -4,12 +4,12 @@
  */
 package com.yuryhalubets.feature.coin.detail.vm
 
-import android.app.Application
+import android.content.res.Resources
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yuryhalubets.core.domain.Resource
 import com.yuryhalubets.domain.use_case.get_coin.GetCoinUseCase
@@ -23,11 +23,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinDetailViewModel @Inject constructor(
-    application: Application,
     private val getCoinUseCase: GetCoinUseCase,
     private val dispatchersProvider: DispatchersProvider,
+    private val resources: Resources,
     savedStateHandle: SavedStateHandle
-) : AndroidViewModel(application) {
+) : ViewModel() {
 
     private val _state: MutableState<CoinDetailState> = mutableStateOf(CoinDetailState.Loading)
     val state: State<CoinDetailState> = _state
@@ -47,7 +47,7 @@ class CoinDetailViewModel @Inject constructor(
                         val data = result.data
                         if (data == null) {
                             _state.value = CoinDetailState.Failure(
-                                errorMessage = getApplication<Application>().getString(R.string.data_is_empty)
+                                errorMessage = resources.getString(R.string.data_is_empty)
                             )
                         } else {
                             _state.value = CoinDetailState.Success(data = data)
@@ -56,7 +56,7 @@ class CoinDetailViewModel @Inject constructor(
                     is Resource.Error -> {
                         _state.value = CoinDetailState.Failure(
                             errorMessage = result.message
-                                ?: getApplication<Application>().getString(R.string.unexpected_error)
+                                ?: resources.getString(R.string.unexpected_error)
                         )
                     }
                     is Resource.Loading -> {

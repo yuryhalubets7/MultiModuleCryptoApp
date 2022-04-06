@@ -4,12 +4,11 @@
  */
 package com.yuryhalubets.feature.coin.list.vm
 
-import android.app.Application
 import android.content.res.Resources
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yuryhalubets.core.domain.Resource
 import com.yuryhalubets.domain.use_case.get_coins.GetCoinsUseCase
@@ -23,11 +22,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class CoinListViewModel @Inject constructor(
-    application: Application,
     private val getCoinsUseCase: GetCoinsUseCase,
     private val dispatchersProvider: DispatchersProvider,
-    private val resources: Resources,
-) : AndroidViewModel(application) {
+    private val resources: Resources
+) : ViewModel() {
 
     private val _state: MutableState<CoinsState> = mutableStateOf(CoinsState.Loading)
     val state: State<CoinsState> = _state
