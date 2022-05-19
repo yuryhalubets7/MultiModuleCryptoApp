@@ -18,6 +18,7 @@ fun Project.configureKotlinCompile() {
         kotlinOptions {
             jvmTarget = JavaVersion.VERSION_11.toString()
             allWarningsAsErrors = true
+
             freeCompilerArgs = Configs.FreeCompilerArgs
         }
     }
