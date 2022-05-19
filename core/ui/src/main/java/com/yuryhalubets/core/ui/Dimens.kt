@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2022, Yury Halubets
+ * All rights reserved.
+ */
 package com.yuryhalubets.core.ui
 
 import androidx.compose.ui.unit.Dp
